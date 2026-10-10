@@ -1,0 +1,216 @@
+/* ══════════════════════════════════════════════════════
+   Identidade visual do Synapse (warmglass) aplicada ao Starlight.
+   O Starlight usa :root para o tema escuro e
+   [data-theme='light'] para o claro.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Tema escuro (padrão do Starlight) ── */
+:root {
+  --acc: #a78bfa;
+  --acc2: #8b5cf6;
+  --acc-t: #fb923c;
+  --acc-w: #f0abfc;
+
+  --bg0: #050200;
+  --bg1: #0a0806;
+  --bg2: #141110;
+  --bg3: #1e1b19;
+
+  --surface-glass: rgba(8, 6, 4, 0.55);
+  --surface-glass-strong: rgba(8, 6, 4, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.07);
+  --glass-border-hover: rgba(167, 139, 250, 0.2);
+  --glass-blur: 18px;
+
+  --sl-font: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --sl-font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --sl-color-white: #f3f4f6;
+  --sl-color-gray-1: #e5e7eb;
+  --sl-color-gray-2: #c4c7cc;
+  --sl-color-gray-3: #9ca3af;
+  --sl-color-gray-4: #6b7280;
+  --sl-color-gray-5: #2a2623;
+  --sl-color-gray-6: #141110;
+  --sl-color-black: #050200;
+
+  --sl-color-accent-low: rgba(124, 58, 237, 0.22);
+  --sl-color-accent: #8b5cf6;
+  --sl-color-accent-high: #c4b5fd;
+
+  --sl-color-orange-low: rgba(249, 115, 22, 0.14);
+  --sl-color-orange: #fb923c;
+  --sl-color-orange-high: #fed7aa;
+  --sl-color-green-low: rgba(16, 185, 129, 0.14);
+  --sl-color-green: #34d399;
+  --sl-color-green-high: #a7f3d0;
+  --sl-color-red-low: rgba(239, 68, 68, 0.14);
+  --sl-color-red: #f87171;
+  --sl-color-red-high: #fecaca;
+  --sl-color-purple-low: rgba(232, 121, 249, 0.12);
+  --sl-color-purple: #e879f9;
+  --sl-color-purple-high: #f5d0fe;
+
+  --sl-color-bg: transparent;
+  --sl-color-bg-nav: var(--surface-glass-strong);
+  --sl-color-bg-sidebar: var(--surface-glass);
+  --sl-color-hairline: var(--glass-border);
+  --sl-color-hairline-light: rgba(255, 255, 255, 0.1);
+  --sl-color-bg-inline-code: rgba(139, 92, 246, 0.14);
+  --sl-color-text-invert: #1a0b33;
+}
+
+/* ── Tema claro ── */
+:root[data-theme='light'] {
+  --acc: #8b5cf6;
+  --acc2: #7c3aed;
+  --acc-t: #f97316;
+  --acc-w: #e879f9;
+
+  --bg0: #faf8f5;
+  --bg1: #ffffff;
+  --bg2: #f3f0eb;
+  --bg3: #ebe7e0;
+
+  --surface-glass: rgba(255, 255, 255, 0.65);
+  --surface-glass-strong: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --glass-border-hover: rgba(124, 58, 237, 0.22);
+
+  --sl-color-white: #111827;
+  --sl-color-gray-1: #1f2937;
+  --sl-color-gray-2: #374151;
+  --sl-color-gray-3: #6b7280;
+  --sl-color-gray-4: #9ca3af;
+  --sl-color-gray-5: #e5e7eb;
+  --sl-color-gray-6: #f3f0eb;
+  --sl-color-gray-7: #faf8f5;
+  --sl-color-black: #ffffff;
+
+  --sl-color-accent-low: #ede9fe;
+  --sl-color-accent: #7c3aed;
+  --sl-color-accent-high: #5b21b6;
+
+  --sl-color-orange-low: #fff7ed;
+  --sl-color-orange: #ea580c;
+  --sl-color-orange-high: #9a3412;
+  --sl-color-green-low: #d1fae5;
+  --sl-color-green: #059669;
+  --sl-color-green-high: #065f46;
+  --sl-color-red-low: #fee2e2;
+  --sl-color-red: #dc2626;
+  --sl-color-red-high: #991b1b;
+  --sl-color-purple-low: #fae8ff;
+  --sl-color-purple: #c026d3;
+  --sl-color-purple-high: #86198f;
+
+  --sl-color-bg: transparent;
+  --sl-color-bg-nav: var(--surface-glass-strong);
+  --sl-color-bg-sidebar: var(--surface-glass);
+  --sl-color-hairline: var(--glass-border);
+  --sl-color-hairline-light: rgba(0, 0, 0, 0.08);
+  --sl-color-bg-inline-code: #f5f3ff;
+}
+
+/* ── Fundo: manchas de cor + grão ── */
+html {
+  background-color: var(--bg0);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 55% at -5% 25%, rgba(124, 58, 237, 0.22) 0%, rgba(124, 58, 237, 0.08) 40%, transparent 70%),
+    radial-gradient(ellipse 65% 50% at 105% 80%, rgba(249, 115, 22, 0.18) 0%, rgba(249, 115, 22, 0.06) 45%, transparent 70%),
+    radial-gradient(ellipse 45% 40% at 85% 35%, rgba(232, 121, 249, 0.1) 0%, transparent 60%),
+    var(--bg0);
+}
+
+:root[data-theme='light'] body::before {
+  background:
+    radial-gradient(ellipse 60% 50% at 5% 85%, rgba(249, 115, 22, 0.12) 0%, rgba(249, 150, 80, 0.05) 40%, transparent 70%),
+    radial-gradient(ellipse 55% 45% at 90% 15%, rgba(192, 140, 255, 0.1) 0%, rgba(192, 140, 255, 0.03) 45%, transparent 70%),
+    radial-gradient(ellipse 40% 35% at 50% 50%, rgba(232, 121, 249, 0.04) 0%, transparent 60%),
+    var(--bg0);
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px;
+  mix-blend-mode: screen;
+  opacity: 0.06;
+}
+
+:root[data-theme='light'] body::after {
+  mix-blend-mode: multiply;
+  opacity: 0.17;
+}
+
+/* ── Superfícies de vidro: cabeçalho e barra lateral ── */
+.header,
+.sidebar-pane {
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+}
+
+/* ── Tipografia ── */
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+h1#_top {
+  letter-spacing: -0.015em;
+}
+
+/* ── Cards, tabelas e blocos de código como vidro ── */
+.card,
+.sl-link-card,
+.sl-markdown-content table,
+.expressive-code .frame {
+  background: var(--surface-glass-strong);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+}
+
+.sl-link-card:hover,
+.card:hover {
+  border-color: var(--glass-border-hover);
+}
+
+.sl-markdown-content table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sl-markdown-content th {
+  background: var(--sl-color-accent-low);
+}
+
+.sl-markdown-content :is(th, td) {
+  padding: 0.55rem 0.9rem;
+}
+
+/* ── Hero da página inicial com o gradiente da marca ── */
+.hero h1 {
+  background: linear-gradient(135deg, var(--acc) 0%, var(--acc-t) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+::selection {
+  background-color: rgba(139, 92, 246, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

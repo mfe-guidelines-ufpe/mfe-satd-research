@@ -1,0 +1,35 @@
+# Vídeo e áudio
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.webm
+*.mp3
+*.m4a
+*.wav
+
+# Compactados pesados
+*.zip
+*.rar
+*.7z
+
+# Python e notebooks
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+
+# Lixo de sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+
+
+node_modules/
+dist/
+.astro/
+.env
+.DS_Store

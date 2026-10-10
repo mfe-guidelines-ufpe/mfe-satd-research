@@ -1,0 +1,36 @@
+---
+title: SATD em Microfrontends
+description: Documentação da pesquisa de mestrado sobre dívida técnica autoadmitida em arquiteturas de microfrontends.
+template: splash
+hero:
+  tagline: Dívida técnica autoadmitida como lente de diagnóstico para os desafios arquiteturais de microfrontends. Pesquisa de mestrado no CIn/UFPE.
+  actions:
+    - text: Ler a visão geral
+      link: /visao-geral/objetivo/
+      icon: right-arrow
+    - text: Ver as decisões
+      link: /decisoes/met-dec-001/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## Onde a pesquisa está
+
+<CardGrid>
+  <Card title="DTS1: mapeamento" icon="seti:folder">
+    455 repositórios open source de microfrontends validados, a partir de 2.793 candidatos. Catalogação em andamento com validação cruzada circular.
+  </Card>
+  <Card title="DTS2: mineração de SATD" icon="seti:python">
+    Pipeline `satd-miner` construído e rodado em dois lotes: 5 e 50 repositórios. Expansão planejada para um subconjunto estratificado de cerca de 100.
+  </Card>
+</CardGrid>
+
+## Seções
+
+<CardGrid>
+  <LinkCard title="Metodologia" href="/metodologia/protocolo/" description="Protocolo de validação cruzada circular e papéis da equipe." />
+  <LinkCard title="Taxonomia" href="/taxonomia/" description="Maldonado & Shihab estendida com as dimensões de localização em MFE." />
+  <LinkCard title="Decisões" href="/decisoes/met-dec-001/" description="Registro de cada decisão metodológica: o que, por que e quando." />
+  <LinkCard title="Check-ins" href="/check-ins/2026-08-10/" description="Registro semanal enviado ao orientador." />
+</CardGrid>
